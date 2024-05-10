@@ -1,0 +1,32 @@
+<div class="home_img">
+    <div class="login-container">
+    <div style="border: 1px solid #ccc; padding: 20px; width: 600px; margin: 0 auto; background-color: rgba(255, 255, 255, 0.829);">
+        <p>View Table!</p>
+        <br>
+        <br>
+        <table style="width: 100%;">
+            <tr>
+                <th style="text-align: left;">SL.NO</th>
+                <th style="text-align: left;">Student Name</th>
+                <th style="text-align: left;">Roll No</th>
+                <th style="text-align: left;">Class Name</th>
+                <th style="text-align: left;">Action</th>
+            </tr>
+            <tbody *ngFor="let data of a; let i = index">
+                <tr>
+                    <td>{{ i+1 }}</td>
+                    <td>{{ data.studentname }}</td>
+                    <td>{{ data.rollno }}</td>
+                    <td>{{ data.classname }}</td>
+                    <div style="display: flex; gap: 10px;">
+                        <button (click)="navigate(data, i)" style="padding: 2px;  cursor: pointer;">Update</button>
+                        <button (click)="deleteItem(data)" style="background-color: red; padding: 2px;  cursor: pointer;">Delete</button>
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+
+        <button [routerLink]="['/add_student']" style=" margin-top: 20px;">Back</button>
+    </div>
+</div>
+</div>

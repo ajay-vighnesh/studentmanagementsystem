@@ -1,0 +1,20 @@
+<div class="home_img">
+    <div class="login-container">
+
+    <div style="border: 1px solid #ccc; padding: 20px; width: 300px; margin: 0 auto; background-color: rgba(255, 255, 255, 0.829);">
+        <h3 style="margin-bottom: 10px;">Student Login</h3>
+
+        <div style="margin-bottom: 15px;">
+            <h4>Student Name:</h4>
+            <input type="text" [(ngModel)]="studentName" style="width: 100%;">
+        </div>
+       
+        <div style="margin-bottom: 15px;">
+            <h4>Password:</h4>
+            <input type="password" [(ngModel)]="password" style="width: 100%;">
+        </div>
+        
+        <button type="submit" (click)="checkLogin()" style="width: 100%; margin-top: 15px;">Submit</button>
+    </div>
+    </div>
+</div>
